@@ -1,17 +1,17 @@
 <app-header></app-header>
 <div class="container-fluid p-0" >
-    <video class="w-100" style="max-height: 400px; background-color: black; " >
-        <source src="https://media0.giphy.com/media/yoJC2ygNZB12dFVcI0/giphy.gif?cid=ecf05e47mp0vztndahov8agp0q04hjdiitg70lwznunt49ml&rid=giphy.gif&ct=g" type="video/mp4"  />
+    <video class="w-100" style="max-height: 400px; background-color: black; object-fit: cover; " autoplay muted loop controls>
+        <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4"  />
       </video>
 </div>
-<div class="container-fluid px-4 my-5">
-  <div class="row">
-    <div class=" col-12 col-md-3 gradient-bg mb-3 p-3 " >
+<div class="container-fluid px-4 my-5 ">
+  <div class="row ">
+    <div class=" col-12 col-md-4 col-lg-3 gradient-bg mb-3 py-3 px-3  " >
       <h3 class="text-center mb-5">ALL TIME POPULAR</h3>
       <ul class="p-0" >
-        <li class="d-flex justify-content-between" *ngFor="let movie of popularMovies;let i=index">
+        <li class="d-flex justify-content-between" *ngFor="let movie of popularMovies;">
           <div class="d-flex">
-            <div class="me-2">{{i+1}})</div>
+            
             <div>{{ movie.name }}</div>
           </div>
           
@@ -21,11 +21,11 @@
       </ul>
       
     </div>
-    <div class="col-12 col-md-9 p-3" >
+    <div class="col-12 col-md-8 col-lg-9 py-3 px-5" >
       <h3>Trending Movies</h3>
       <div class="row mb-5" >
       
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2 g-4" *ngFor="let movie of trendingMovies">
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 g-4" *ngFor="let movie of trendingMovies">
           <div class="card h-100" >
             <img [src]="movie.cover" class="card-img-top" alt="..." style="object-fit:cover ;">
             <div class="card-body d-flex flex-column justify-content-around">
@@ -51,7 +51,7 @@
       </div>
       <h3>Popular in Theatres</h3>
       <div class="row ">
-        <div class="col-6 col-sm-4 col-md-3 col-lg-2 g-4" *ngFor="let movie of theatreMovies">
+        <div class="col-6 col-md-4 col-lg-3 col-xl-2 g-4" *ngFor="let movie of theatreMovies">
           <div class="card h-100" >
             <img [src]="movie.cover" class="card-img-top" alt="..." style="object-fit:cover ;">
             <div class="card-body d-flex flex-column justify-content-around">
