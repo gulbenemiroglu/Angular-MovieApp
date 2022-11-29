@@ -1,0 +1,82 @@
+<app-header></app-header>
+<div class="container-fluid p-0" >
+    <video class="w-100" style="max-height: 400px; background-color: black; " >
+        <source src="https://media0.giphy.com/media/yoJC2ygNZB12dFVcI0/giphy.gif?cid=ecf05e47mp0vztndahov8agp0q04hjdiitg70lwznunt49ml&rid=giphy.gif&ct=g" type="video/mp4"  />
+      </video>
+</div>
+<div class="container-fluid px-4 my-5">
+  <div class="row">
+    <div class=" col-12 col-md-3 gradient-bg mb-3 p-3 " >
+      <h3 class="text-center mb-5">ALL TIME POPULAR</h3>
+      <ul class="p-0" >
+        <li class="d-flex justify-content-between" *ngFor="let movie of popularMovies;let i=index">
+          <div class="d-flex">
+            <div class="me-2">{{i+1}})</div>
+            <div>{{ movie.name }}</div>
+          </div>
+          
+          <div><strong>{{movie.rating}}</strong></div>
+        </li>
+        
+      </ul>
+      
+    </div>
+    <div class="col-12 col-md-9 p-3" >
+      <h3>Trending Movies</h3>
+      <div class="row mb-5" >
+      
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 g-4" *ngFor="let movie of trendingMovies">
+          <div class="card h-100" >
+            <img [src]="movie.cover" class="card-img-top" alt="..." style="object-fit:cover ;">
+            <div class="card-body d-flex flex-column justify-content-around">
+              <h6 class="card-title">{{ movie.name }}</h6>
+              <div class="d-flex justify-content-around align-items-center">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc107" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc107" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc107" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              
+                <p class="card-text ">{{ movie.rating }}/5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <h3>Popular in Theatres</h3>
+      <div class="row ">
+        <div class="col-6 col-sm-4 col-md-3 col-lg-2 g-4" *ngFor="let movie of theatreMovies">
+          <div class="card h-100" >
+            <img [src]="movie.cover" class="card-img-top" alt="..." style="object-fit:cover ;">
+            <div class="card-body d-flex flex-column justify-content-around">
+              <h6 class="card-title ">{{ movie.name }}</h6>
+              <div class="d-flex justify-content-around align-items-center">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc107" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc107" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ffc107" class="bi bi-star-fill" viewBox="0 0 16 16">
+                  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                </svg>
+              
+                <p class="card-text ">{{ movie.rating }}/5</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>

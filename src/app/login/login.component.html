@@ -1,0 +1,48 @@
+<video id="myVideo" autoplay muted loop >
+    <source src="https://media0.giphy.com/media/yoJC2ygNZB12dFVcI0/giphy.gif?cid=ecf05e47mp0vztndahov8agp0q04hjdiitg70lwznunt49ml&rid=giphy.gif&ct=g" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+  
+  <div class="content">
+    <form class="w-50 m-auto p-5" style="background-color: rgb(0, 0, 0); border-radius: 10px;">
+        <div class="row">
+            <div class="col-12 col-md-3 col-lg-2"></div>
+            <div class="col-12 col-md-9 col-lg-10">
+                <h1 class="text-center mb-5">MOVIE APP</h1>
+            </div>
+        </div>
+        
+        <div class="row mb-3">
+          <label for="uname" class="col-12 col-md-3 col-lg-2 col-form-label text-white">Email</label>
+          <div class="col-12 col-md-9 col-lg-10">
+            <input type="text" class="form-control" name="uname" [(ngModel)]="username" >
+          </div>
+        </div>
+    
+        <div class="row mb-3">
+          <label for="pword" class="col-12 col-md-3 col-lg-2 col-form-label text-white ">Password</label>
+          <div class="col-12 col-md-9 col-lg-10">
+            <input type="password" class="form-control" name="pword" [(ngModel)]="password">
+          </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-12 col-md-3 col-lg-2"></label>
+            <div class="col-12 col-md-9 col-lg-10">
+                <div class="error">{{ errorMsg }}</div>
+                <button class="btn btn-warning w-100 fw-bold" style="font-size: large;" (click)="login()">LOGIN</button>
+            </div>
+          </div>
+        
+      </form>
+  </div>
+
+  
+
+
+
+
+
+
+
+
+
